@@ -1,0 +1,19 @@
+ <h1> Transactions for <%= user.username %>
+ </h1>
+ <p> Here is your list of transactions!!!!!!!</p>
+ <li><a href="/transactions">transaction table</a></li>
+ <br>
+ <table class="table table-bordered table-striped">
+   <th>category</th>
+   <th>amount</th>
+   <% transactions.forEach((transaction=> { %>
+   <tr>
+     <td>
+       <%= transaction._id%>
+     </td>
+     <td>
+       <%= transaction.total %>
+     </td>
+   </tr>
+   <% }))%>
+ </table>

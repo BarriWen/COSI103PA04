@@ -1,0 +1,19 @@
+<pre>
+    <%= JSON.stringify(transaction,null,5) %>
+</pre>
+<form method="POST" action="/transactions/edit">
+  <input type="hidden" name="transactionId" value="<%= transaction._id %>">
+  <label for="description">description: </label>
+  <input type="text" value="<%= transaction.description %>" name="description">
+  <br>
+  <label for="category">category: </label>
+  <input type="text" value="<%= transaction.category %>" name="category">
+  <br>
+  <label for="amount">amount: </label>
+  <input type="number" value="<%= transaction.amount %>" name="amount">
+  <br>
+  <label for="date">date: </label>
+  <input type="date" value="<%= transaction.date %>" name="date">
+  <br>
+  <input type="submit" value="store">
+</form>
