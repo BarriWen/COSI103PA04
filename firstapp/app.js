@@ -9,8 +9,6 @@ const toDoRouter = require("./routes/todo");
 const weatherRouter = require("./routes/weather");
 const transactionRouter = require("./routes/transactionRoutes");
 
-const User = require("./models/User");
-
 /* **************************************** */
 /*  Connecting to a Mongo Database Server   */
 /* **************************************** */
